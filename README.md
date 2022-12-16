@@ -1,4 +1,4 @@
-## Identifying Similar Test Cases That Are Specified in Natural Language
+## Removing Redundant Test Cases That Are Specified in Natural Language
 
 This repository contains the source code of our course project MM811 wherein we are supposed to remove similar test cases that are specified in natural language.
 
