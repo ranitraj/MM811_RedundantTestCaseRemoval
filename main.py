@@ -11,4 +11,6 @@ if __name__ == '__main__':
     # Preprocess the training dataset
     preprocessing_utils.read_input_data(training_data)
     test_steps_df = preprocessing_utils.clean_dataset(training_data)
+    training_list = preprocessing_utils.return_training_list(test_steps_df)
+
 

@@ -2,6 +2,7 @@ import re
 import string
 import nltk
 import constants
+import pandas as pd
 
 from nltk.corpus import stopwords
 from nltk.tokenize import TweetTokenizer
@@ -103,8 +104,10 @@ def clean_dataset(data):
     # Remove digits, punctuations and extra-spaces
     data[constants.STEPS] = data[constants.STEPS].apply(lambda x: re.sub('\w*\d\w*', '', x))
     data[constants.CASE_NAME] = data[constants.CASE_NAME].apply(lambda x: re.sub('\w*\d\w*', '', x))
-    data[constants.STEPS] = data[constants.STEPS].apply(lambda x: re.sub('[%s]' % re.escape(string.punctuation), ' ', x))
-    data[constants.CASE_NAME] = data[constants.CASE_NAME].apply(lambda x: re.sub('[%s]' % re.escape(string.punctuation), ' ', x))
+    data[constants.STEPS] = data[constants.STEPS].apply(
+        lambda x: re.sub('[%s]' % re.escape(string.punctuation), ' ', x))
+    data[constants.CASE_NAME] = data[constants.CASE_NAME].apply(
+        lambda x: re.sub('[%s]' % re.escape(string.punctuation), ' ', x))
     data[constants.STEPS] = data[constants.STEPS].apply(lambda x: re.sub(' +', ' ', x))
     data[constants.CASE_NAME] = data[constants.CASE_NAME].apply(lambda x: re.sub(' +', ' ', x))
 
@@ -143,7 +146,8 @@ def clean_dataset(data):
         for word in current_test_name:
             if word in word_frequency_threshold_case:
                 list_words_to_remove_steps.append(word)
-        data.loc[index][constants.STEPS] = [elem for elem in current_test_name if not elem in list_words_to_remove_steps]
+        data.loc[index][constants.STEPS] = [elem for elem in current_test_name if
+                                            not elem in list_words_to_remove_steps]
 
     # List of words to be removed in Test-Case
     for index, row in data.iterrows():
@@ -152,7 +156,8 @@ def clean_dataset(data):
         for word in current_test_name:
             if word in word_frequency_threshold_case:
                 list_words_to_remove_case.append(word)
-        data.loc[index][constants.CASE_NAME] = [elem for elem in current_test_name if not elem in list_words_to_remove_case]
+        data.loc[index][constants.CASE_NAME] = [elem for elem in current_test_name if
+                                                not elem in list_words_to_remove_case]
 
     # Remove instances with empty names
     data = data.loc[data[constants.STEPS] != '']
@@ -165,3 +170,37 @@ def clean_dataset(data):
 
     print("Size of dataset after preprocessing = ", data.shape)
     return data
+
+
+def return_training_list(data):
+    """
+    Returns the necessary fields to train the word2vec word embedding model i.e 'type', 'name', 'steps'
+
+    :param data: preprocessed data
+    :return: training data
+    """
+    training_list = list()
+    for index, row in data.iterrows():
+        temp_list = list()
+
+        if not pd.isnull(row[constants.TYPE]):
+            temp_list.append(str(row[constants.TYPE]))
+
+        if isinstance(row[constants.CASE_NAME], list):
+            for elem in row[constants.CASE_NAME]:
+                temp_list.append(elem)
+        else:
+            if isinstance(row[constants.CASE_NAME], str):
+                temp_list.append(row[constants.CASE_NAME])
+
+        if isinstance(row[constants.STEPS], list):
+            for elem in row[constants.STEPS]:
+                temp_list.append(elem)
+        else:
+            if isinstance(row[constants.STEPS], str):
+                temp_list.append(row[constants.STEPS])
+
+        # List of lists of tokens
+        training_list.append(temp_list)
+    print(f"Length of list with training data = {len(training_list)}")
+    return training_list
