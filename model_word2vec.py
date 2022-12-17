@@ -1,9 +1,8 @@
 import numpy as np
 import constants
-import gensim
 
-from gensim.similarities import WmdSimilarity
-from gensim.models import Word2Vec, Phrases, KeyedVectors
+from sklearn.cluster import KMeans
+from gensim.models import Word2Vec
 
 
 def train_word2vec_model(data, pre_trained_model, vector_size, workers, word_freq_threshold,
@@ -118,6 +117,7 @@ def compute_and_save_similarity_distance(model, list_test_step_clustering, matri
         for cur_column in range(cur_row, columns):
             similarity_distance = model.wv.wmdistance(list_test_step_clustering[cur_row],
                                                       list_test_step_clustering[cur_column])
+            # Upper limit
             if similarity_distance > 800:
                 similarity_distance = 800
             matrix_similarity_distance[cur_row, cur_column] = matrix_similarity_distance[
@@ -128,3 +128,113 @@ def compute_and_save_similarity_distance(model, list_test_step_clustering, matri
     np.savetxt(path_save_matrix_similarity, matrix_similarity_distance)
 
     return matrix_similarity_distance
+
+
+def compute_average_test_step(test_step, model, pre_trained_model):
+    """
+    Computes the average word vector of the test step
+
+    :param test_step: current test-step
+    :param model: trained word2vec model
+    :param pre_trained_model: pre-trained word2vec model
+    :return: average
+    """
+    list_word_vectors = list()
+    count_word = 0
+    for word in test_step:
+        try:
+            list_word_vectors.append(model[word])
+        except:
+            try:
+                list_word_vectors.append(pre_trained_model[word])
+            except:
+                return np.zeros(200)
+        count_word += 1
+    sum_vectors = sum(list_word_vectors)
+    average = sum_vectors / count_word
+    return average
+
+
+def perform_clustering_and_save(model, pre_trained_model, data, list_tuple_step_id, list_test_step_clustering):
+    """
+    Performs k-means clustering on the test_step and step_id and saves the clustered results in .txt files
+
+    :param model: trained word2vec model
+    :param pre_trained_model: pre-trained word2vec model
+    :param data: processed data
+    :param list_tuple_step_id: tuple of step-id
+    :param list_test_step_clustering: clustered list
+    :return: dict_clusters: dictionary of the clusters
+    """
+    labels_list_kmeans = list()
+
+    # Compute average word vector to be used in k-means
+    avg_word_sentence_vectors = list()
+    for cur_test_step in list_test_step_clustering:
+        if len(cur_test_step) > 0:
+            avg_word_sentence_vectors.append(
+                compute_average_test_step(
+                    cur_test_step,
+                    model,
+                    pre_trained_model
+                )
+            )
+
+    # Initialize K-means
+    k_means = KMeans(
+        n_clusters=constants.K_MEANS_CLUSTER_COUNT,
+        init='k-means++',
+        max_iter=500
+    )
+    k_means.fit(avg_word_sentence_vectors)
+    labels = k_means.labels_
+    labels_list_kmeans.append(labels)
+
+    dict_clusters = {}
+    for cur_label in set(labels):
+        label_indices = np.where(labels == cur_label)[0].tolist()
+        for cur_index in label_indices:
+            dict_clusters[int(list_tuple_step_id[cur_index][0])] = cur_label
+
+    print(f"Number of clusters = {k_means.n_clusters} & Number of labels = {k_means.labels_}")
+    save_clusters(k_means.labels_, list_tuple_step_id, list_test_step_clustering, data)
+    save_cluster_labels(k_means.labels_, list_tuple_step_id)
+
+    return dict_clusters
+
+
+def save_clusters(labels, list_tuple_step_id, list_test_step_clustering, data):
+    """
+    Saves clusters in a text-file
+
+    :param labels: k-means labels
+    :param list_tuple_step_id: tuple of step-id
+    :param list_test_step_clustering: clustered list
+    :param data: processed data
+    """
+    path = "clustered_data_kmeans.txt"
+    output = open(path, "a")
+    for label in set(labels):
+        indices_label = np.where(labels == label)[0].tolist()
+        for index in indices_label:
+            str_to_save = "[" + str(label) + "]:\t\t" + data.loc[index]["Key"] + "\t\t" + str(
+                list_tuple_step_id[index][0]) + "\t\t" + str(list_test_step_clustering[index]) + "\n"
+            output.write(str_to_save)
+    output.close()
+
+
+def save_cluster_labels(labels, list_tuple_step_id):
+    """
+    Saves cluster labels in a text-file
+
+    :param labels: k-means labels
+    :param list_tuple_step_id: tuple of step-id
+    """
+    path = "clustered_labels_kmeans.txt"
+    output = open(path, "a")
+    for single_label in set(labels):
+        indices_label = np.where(labels == single_label)[0].tolist()
+        str_to_save = "[" + str(single_label) + "]: " + ','.join(
+            str(list_tuple_step_id[x][0]) for x in indices_label) + "\n"
+        output.write(str_to_save)
+    output.close()

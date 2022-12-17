@@ -8,7 +8,7 @@ import model_word2vec
 from gensim.models.keyedvectors import KeyedVectors
 
 if __name__ == '__main__':
-    # Part-1 [Performing Test-Step Similarity]
+    # Part-1 [Performing Test-Case Similarity]
 
     # Load dataset
     training_data = pd.read_excel(constants.DATASET_PATH)
@@ -47,6 +47,15 @@ if __name__ == '__main__':
         my_model,
         list_test_step_clustering,
         matrix_similarity_distance
+    )
+
+    # Perform Clustering of test-steps using K-Means
+    dict_clusters = model_word2vec.perform_clustering_and_save(
+        my_model,
+        pre_trained_model,
+        training_list,
+        list_tuple_step_id,
+        list_test_step_clustering
     )
 
 
