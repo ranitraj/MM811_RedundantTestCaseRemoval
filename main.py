@@ -36,3 +36,17 @@ if __name__ == '__main__':
         constants.DOWN_SAMPLING
     )
 
+    # Obtain tuple for step_id and list of test-step clustering from the training data
+    list_tuple_step_id, list_test_step_clustering = model_word2vec.return_data_tuple(training_list)
+
+    # Create an Empty matrix with rows and columns equal to the shape of 'list_test_step_clustering'
+    matrix_similarity_distance = model_word2vec.initialize_similarity_matrix(list_test_step_clustering)
+
+    # Calculate similarity between word embeddings using Word-Movers Distance and save the result
+    matrix_similarity_distance = model_word2vec.compute_and_save_similarity_distance(
+        my_model,
+        list_test_step_clustering,
+        matrix_similarity_distance
+    )
+
+

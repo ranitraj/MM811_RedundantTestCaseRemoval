@@ -61,3 +61,70 @@ def train_word2vec_model(data, pre_trained_model, vector_size, workers, word_fre
     # Train the model
     my_model.train(data, total_examples=total_examples, epochs=25)
     return my_model
+
+
+def return_data_tuple(data):
+    """
+    Returns tuples with step_id, step which is used to retrieve the step_id after clustering
+
+    :param data: data
+    :return: list_tuple_step_id, list_test_step_clustering
+    """
+    list_tuple_step_id = list()
+    list_test_step_clustering = list()
+
+    for index, row in data.iterrows():
+        step_id = row[constants.STEP_ID]
+        step = row[constants.STEPS]
+        list_tuple_step_id.append((step_id, step))
+
+        temp_list = list()
+        if isinstance(row[constants.STEPS], list):
+            for cur_element in row[constants.STEPS]:
+                temp_list.append(cur_element)
+        else:
+            if isinstance(row[constants.STEPS], str):
+                temp_list.append(row[constants.STEPS])
+        list_test_step_clustering.append(temp_list)
+
+    print(f"First Tuple = {list_tuple_step_id[0]}")
+    return list_tuple_step_id, list_test_step_clustering
+
+
+def initialize_similarity_matrix(list_test_step_clustering):
+    """
+    Create and returns an empty matrix with rows and columns equal to the shape of 'list_test_step_clustering'
+
+    :param list_test_step_clustering: clustering steps list
+    :return: matrix_similarity_distance
+    """
+    rows = columns = len(list_test_step_clustering)
+    return np.zeros((rows, columns))
+
+
+def compute_and_save_similarity_distance(model, list_test_step_clustering, matrix_similarity_distance):
+    """
+    Computes the similarity distance between the rows and columns of list_test_step_clustering
+    and saves the result in a .txt file
+
+    :param model: word2vec model
+    :param list_test_step_clustering: clustering steps list
+    :param matrix_similarity_distance: empty matrix
+    :return: matrix_similarity_distance with similarities
+    """
+    rows = columns = len(list_test_step_clustering)
+
+    for cur_row in range(rows):
+        for cur_column in range(cur_row, columns):
+            similarity_distance = model.wv.wmdistance(list_test_step_clustering[cur_row],
+                                                      list_test_step_clustering[cur_column])
+            if similarity_distance > 800:
+                similarity_distance = 800
+            matrix_similarity_distance[cur_row, cur_column] = matrix_similarity_distance[
+                cur_column, cur_row] = similarity_distance
+
+    # Save the similarity matrix
+    path_save_matrix_similarity = 'matrix_similarity.txt'
+    np.savetxt(path_save_matrix_similarity, matrix_similarity_distance)
+
+    return matrix_similarity_distance
