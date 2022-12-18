@@ -30,6 +30,7 @@ The following techniques were used to remove the redundant test cases and test s
 - Step-I: Test Steps clustering with Word2Vec
   - Open the Jupyter Notebook file *[I_Test_Step_Clustering_Word2Vec.ipynb](I_Test_Step_Clustering_Word2Vec.ipynb)* and execute all the cells one-by-one.
   - Run the *Code Executon* cell block.
+  - Important Note: You need to download the pretrained Word2Vec Model from *[here](https://zenodo.org/record/1199620)* in order to execute *Code Executon* cell block.
 
 
 - Step-II: Ensemble Technique using Majority Voting Approach
@@ -43,7 +44,6 @@ The following techniques were used to remove the redundant test cases and test s
 - Step-IV: Final Output Test Case File
   - After getting the similarity score of all the test steps we use the .txt file generated from the code to generate a new output test cases file which will not have the redundant test cases and steps
   - Open the Jupyter Notebook file *[IV_FinalConversion.ipynb](IV_FinalConversion.ipynb)* and execute all the cells one-by-one.
-
 
 
 ## Implementation:
