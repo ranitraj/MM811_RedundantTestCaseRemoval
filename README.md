@@ -47,9 +47,7 @@ The following techniques were used to remove the redundant test cases and test s
 
 
 ## Implementation:
-- Loads the training dataset provided titled *[test_cases.xlsx](test_cases.xlsx)*
-- Performs pre-processing opeartions on the training dataset comprising of the functions *get_unique_word_count*, *get_word_frequency*, *read_input_data*, *read_input_data* and *return_training_list*
-- Next, a pre-trained Word2Vec model is additionally trained with the dataset. This i
+For detailed description regarding the approach and implementation used in the code, please refer the document *[Removing_Redundant_Test_Cases.pdf](Removing_Redundant_Test_Cases.pdf)*
 
 
 ## Citations and References:
