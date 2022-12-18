@@ -25,4 +25,5 @@ In today’s rapidly advancing software industry,  we experience exciting techno
 ## Citations and References:
 - For understanding of our project requirements and the necessary steps required to achieve the objective, we extensively referred the research paper [Identifying similar test cases that are specified in natural language](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9763328).
 - For the code implementation, we referred the repository [asgaardlab/21-markos-test_case_similarity_technique-code](https://github.com/asgaardlab/21-markos-test_case_similarity_technique-code).
+- Citations have been added in *[bibliography.bib](bibliography.bib)*
     
