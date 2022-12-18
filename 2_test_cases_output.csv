@@ -1,0 +1,385 @@
+Type,Key,Case_Name,Step_ID,Steps
+OTP Validation,TC1,"Check if User is able to edit the
+mobile number",1,Enter the phone number
+OTP Validation,TC1,"Check if User is able to edit the
+mobile number",2,send OTP
+OTP Validation,TC1,"Check if User is able to edit the
+mobile number",3,Click edit button
+OTP Validation,TC2,Verify if ten digit number is accepted,1,Enter ten digit phone number
+OTP Validation,TC2,Verify if ten digit number is accepted,2,Send OTP button should become active
+OTP Validation,TC3,"Verify if OTP is received on user 
+number",1,Enter the phone number
+OTP Validation,TC3,"Verify if OTP is received on user 
+number",2,send OTP
+OTP Validation,TC3,"Verify if OTP is received on user 
+number",3,Check inbox of the mobile phone
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,1,Enter the phone number
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,2,send OTP
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,3,login into the system
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,4,logout from the system
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,5,Enter the same mobile number
+OTP Validation,TC4,Verify that it is not allowing already used OTP number for  logging in again,6,Enter the same OTP again
+OTP Validation,TC5,Click on resend OTP and enter earlier received OTP,1,Enter the phone number
+OTP Validation,TC5,Click on resend OTP and enter earlier received OTP,2,send OTP
+OTP Validation,TC5,Click on resend OTP and enter earlier received OTP,3,Resend OTP
+OTP Validation,TC5,Click on resend OTP and enter earlier received OTP,4,Enter earlier received OTP
+OTP Validation,TC6,Verify if its accepting ten minutes old OTP,1,Enter the phone number
+OTP Validation,TC6,Verify if its accepting ten minutes old OTP,2,send OTP
+OTP Validation,TC6,Verify if its accepting ten minutes old OTP,3,Wait for ten minutes
+OTP Validation,TC6,Verify if its accepting ten minutes old OTP,4,Enter the same OTP again
+OTP Validation,TC7,"Check if ""Verify OTP"" button gets enabled only after giving ten digit OTP",1,Enter ten digit phone number
+OTP Validation,TC7,"Check if ""Verify OTP"" button gets enabled only after giving ten digit OTP",2,Verify button should be highlighted
+User profile creation Validation,TC8,Verify the character limit in email id field,1,Enter really long email address
+User profile creation Validation,TC9,"Verify if invalid email id format is 
+accepted",1,enter invalid formats of email ids
+User profile creation Validation,TC10,Verify if already registered primary user email id is accepted,1,enter already registered primary user email id
+User profile creation Validation,TC10,Verify if already registered primary user email id is accepted,2,Check for the appropriate error code from backend
+User profile creation Validation,TC11,Verify if already registered secondary user email id is accepted,1,enter already registered secondary user email id
+User profile creation Validation,TC11,Verify if already registered secondary user email id is accepted,2,Check for the appropriate error code from backend
+User profile creation Validation,TC12,Verify if alphanumeric format is accepted in UserName field,1,Enter alphanumeric format input in username edittext field
+User profile creation Validation,TC12,Verify if alphanumeric format is accepted in UserName field,2,Check for the appropriate error message from frontend
+User profile creation Validation,TC13,Verify if existing Primary Username is accepted,1,enter already taken primary user username
+User profile creation Validation,TC13,Verify if existing Primary Username is accepted,2,Check for the appropriate error code from backend
+User profile creation Validation,TC14,Verify if existing secondary Username is accepted,1,enter already taken secondary user username
+User profile creation Validation,TC14,Verify if existing secondary Username is accepted,2,Check for the appropriate error code from backend
+User profile creation Validation,TC15,"Verify if only text is accepted in
+First Name",1,Enter number along with alphabet for first name edittext field
+User profile creation Validation,TC15,"Verify if only text is accepted in
+First Name",2,Check for the appropriate error message from frontend
+User profile creation Validation,TC16,Verify if only text is accepted in Last Name,1,Enter number along with alphabet for last name edittext field
+User profile creation Validation,TC16,Verify if only text is accepted in Last Name,2,Check for the appropriate error message from frontend
+User profile creation Validation,TC17,"Verify it allows to Click on ""Next"" after completion of all the fields in Step One screen",1,Leave any of the parameter fields empty
+User profile creation Validation,TC17,"Verify it allows to Click on ""Next"" after completion of all the fields in Step One screen",2,Check for the appropriate error message from frontend
+User profile creation Validation,TC18,"Verify if ""Go back"" from Step two takes you back to Step One",1,Press back button from Step two screen
+User profile creation Validation,TC18,"Verify if ""Go back"" from Step two takes you back to Step One",2,Should return back to Step one Screen
+User profile creation Validation,TC19,"Verify if all data from Step One is retained after  user presses ""Go Back"" button from Step Two screen",1,Press back button from Step two screen
+User profile creation Validation,TC19,"Verify if all data from Step One is retained after  user presses ""Go Back"" button from Step Two screen",2,All user input data should be retained
+User profile creation Validation,TC21,"Verify if ""Go back"" from Step three takes you back to Step Two",1,Press back button from Step three screen
+User profile creation Validation,TC21,"Verify if ""Go back"" from Step three takes you back to Step Two",2,Should return back to Step two Screen
+User profile creation Validation,TC22,"Verify if all data from Step Two is retained after user presses ""Go Back"" button from Step Two Three",1,Press back button from Step three screen
+User profile creation Validation,TC22,"Verify if all data from Step Two is retained after user presses ""Go Back"" button from Step Two Three",2,All user input data should be retained
+User profile creation Validation,TC24,"Verify if ""Go back"" from Step Four takes you back to Step Three",1,Press back button from Step four screen
+User profile creation Validation,TC24,"Verify if ""Go back"" from Step Four takes you back to Step Three",2,Should return back to Step three Screen
+User profile creation Validation,TC25,"Verify if all data from Step Three is retained after user presses ""Go Back"" button from Step Two Four",1,Press back button from Step four screen
+User profile creation Validation,TC25,"Verify if all data from Step Three is retained after user presses ""Go Back"" button from Step Two Four",2,All user input data should be retained
+User profile creation Validation,TC26,"Verify if it shows ""connect"" option
+ after internet disconnection",1,Turn off Wifi
+User profile creation Validation,TC26,"Verify if it shows ""connect"" option
+ after internet disconnection",2,No internet dialog should be shown
+User profile creation Validation,TC27,"Verify if minimum and maximum 
+limit of birth years are set",1,Open Datepicker by selecting the input text field
+User profile creation Validation,TC27,"Verify if minimum and maximum 
+limit of birth years are set",2,Date before thirteen years from today should be disabled
+User profile creation Validation,TC28,"Verify if user is able to select 
+date/ month and year",1,Open Datepicker by selecting the input text field
+User profile creation Validation,TC28,"Verify if user is able to select 
+date/ month and year",2,Selecting a date should fill the selected date in the text field
+User profile creation Validation,TC29,"Check if User is able to select
+Gender",1,Open gender dropdown by selecting the input text field
+User profile creation Validation,TC29,"Check if User is able to select
+Gender",2,Selecting a gender should fill the text field
+User profile creation Validation,TC30,"Check if user is able to select
+city",1,Open city dropdown by selecting the input text field
+User profile creation Validation,TC30,"Check if user is able to select
+city",2,Selecting a city should fill the text field
+User profile creation Validation,TC31,Check if autofill feature for city is working,1,Search for a city
+User profile creation Validation,TC31,Check if autofill feature for city is working,2,Selecting a city should fill the text field
+User profile creation Validation,TC33,Check if User is able to select Height,1,Open height slider by selecting the input text field
+User profile creation Validation,TC33,Check if User is able to select Height,2,Clicking a height slider should fill the text field
+User profile creation Validation,TC34,Check if user is able to select Weight,1,Open weight slider by selecting the input text field
+User profile creation Validation,TC34,Check if user is able to select Weight,2,Clicking a weight slider should fill the text field
+User Login,TC35,Verify if user is able to login using registered mobile number and OTP,1,Enter the phone number and send OTP
+User Login,TC35,Verify if user is able to login using registered mobile number and OTP,2,Enter OTP
+User Login,TC35,Verify if user is able to login using registered mobile number and OTP,3,Login into the system
+User Login,TC36,Verify if user is able to login using registered mobile number and OTP,1,Logout the primary user
+User Login,TC36,Verify if user is able to login using registered mobile number and OTP,2,Enter the mobile number of secondary user
+User Login,TC36,Verify if user is able to login using registered mobile number and OTP,3,Check for the appropriate error code from backend as user cannot login
+Education,TC38,Assignment with many students,1,Update the assignment adding students
+Education ,TC38,Assignment with many students ,2,Request the next skill and question from the algorithm gateway for the 1st student on the assignment
+Education,TC38,Assignment with many students ,3,Request the next skill and question from the algorithm gateway for the middle student on the assignment
+Education,TC39,Student has multiuple Assignments,1,Request the next skill and question from the algorithm gateway for one of the students that was on the assignment
+Education,TC39,Student has multiuple Assignments,2,Remove student from the first assignment
+Education,TC39,Student has multiuple Assignments,3,Request the next skill and question from the algorithm gateway for one of the students that was on the assignment
+Education,TC39,Student has multiuple Assignments,4,Remove the student from the second assignment
+Home Page,TC40,Verify if most trending workout is appearing in challenges field,1,Number of participants who have attended the class
+Home Page,TC40,Verify if most trending workout is appearing in challenges field,2,Number of times the video was played
+Home Page,TC41,Favourite Trainers,1,Trainer Related challenges showing as per the set algorithm
+Home Page,TC41,Favourite Trainers,2,Showing challenges attended by the followers
+Home Page,TC41,Favourite Trainers,3,"If user is able to start and end session of trending, trainer, followers feed workouts"
+Home Page,TC42,Follower Feed,1,Check if it shows workout suggestions of people to whom logged in user is following
+Home Page,TC42,Follower Feed,2,Follow one person B from A's account
+Home Page,TC42,Follower Feed,3,Login to B user's account and perform different workouts
+Home Page,TC42,Follower Feed,4,Login to A
+Profile Selection,TC43,Check if user is able to switch profile,1,Should show all the registered users such as primary account and its associated accounts
+Profile Selection,TC43,Check if user is able to switch profile,2,Shows all the user's details which are part of the primary user
+Profile Selection,TC43,Check if user is able to switch profile,3,"Check if other sec users not
+logged in then it should ask for
+mobile number/ OTP"
+Profile Selection,TC43,Check if user is able to switch profile,4,"Check if once logged in, its not
+asking to enter mob number/
+OTP again"
+Profile Selection,TC43,Check if user is able to switch profile,5,"Check if user clicks on plus icon
+and tries to add already present
+user number then it should take
+user to that profile"
+Profile Selection,TC43,Check if user is able to switch profile,6,"Check if once Primary user logs out, all the associated account is getting logged out"
+Profile Selection,TC43,Check if user is able to switch profile,7,Check if any secondary user logs out then only that particular user is getting logged out
+Profile Selection,TC43,Check if user is able to switch profile,8,Check if user is able to add some other primary user/secondary user and login
+Schedule,TC44,Dates and Time,1,Check if past date and time challenge cards are greyed out
+Schedule,TC44,Dates and Time,2,Check if future date and time challenge cards are highlighted
+Schedule,TC45,Cards Status,1,Check if it shows cards time wise in order
+Schedule,TC45,Cards Status,2,Check if it shows cards column-wise as per the dates
+Schedule,TC45,Cards Status,3,Check if count me in button is visible for future time cards
+Schedule,TC46,Refresh Options,1,Check if user is able to refresh the page
+Schedule,TC46,Refresh Options,2,Check if user is able to click on other menu options
+Schedule,TC46,Refresh Options,3,Check if user is able to access other options from bottom menu bar
+Classes for different duration,TC47,Classes based on different filters,1,Check the duration of classes when length filter is applied as fifteen minutes
+Classes for different duration,TC47,Classes based on different filters,2,Check the duration of classes when length filter is applied as thirty minutes
+Classes for different duration,TC47,Classes based on different filters,3,Check the duration of classes when length filter is applied as fortyfive minutes
+Classes for different duration,TC47,Classes based on different filters,4,Check the duration of classes when length filter is applied as sixty minutes
+Feedback,TC48,Select the emojis,1,Check if user is able to select the emojis or unselect the emojis
+Feedback,TC48,Select the emojis,2,Check if user is able to update selected emoji rating or feedback tags
+Feedback,TC49,Feedback getting saved,1,Check if feedback values are getting saved in Feedback table accordingly
+Feedback,TC50,Feedback after attending sessions,1,After attending live session
+Feedback,TC50,Feedback after attending sessions,2,"After attending session from spinning, cardio, strength, yoga"
+Feedback,TC50,Feedback after attending sessions,3,After attending session from scenic
+Bluetooth,TC51,Bluetooth connectivity,1,"If bluetooth is off, app is giving notification to switch it on"
+Bluetooth,TC51,Bluetooth connectivity,2,If user is able to connect to bluetooth
+Bluetooth,TC51,Bluetooth connectivity,3,If bluetooth is connected it shows connected to bluetooth everytime user clicks on any challenge
+Edit Profile,TC52,Edit basic entries ,1,Check if user is able to edit First Name
+Edit Profile,TC52,Edit basic entries ,2,Check if user is able to edit Last Name
+Edit Profile,TC52,Edit basic entries ,3,Check if user is able to edit City
+Edit Profile,TC52,Edit basic entries ,4,Check if user is able to edit Date of birth
+Edit Profile,TC52,Edit basic entries ,5,Check if user is able to edit Gender
+Edit Profile,TC52,Edit basic entries ,6,Check if user is able to edit Height
+Edit Profile,TC52,Edit basic entries ,7,Check if user is able to edit Weight
+Edit Profile,TC53,Profile getting saved after editing ,1,Verify if profile details are getting updated and saved
+Edit Profile,TC53,Profile getting saved after editing ,2,Verify if First and Last Name has validation on numbers and special characters
+Edit Profile,TC53,Profile getting saved after editing,3,"Verify if upon updating , it shows an error and error goes away upon clicking Cancel"
+Edit Profile,TC53,Profile getting saved after editing,4,"Check if empty field in First Name, Last Name are accepted"
+Workout History,TC54,Correct data related to workout,1,Check if it shows latest performed workout always on top
+Workout History,TC54,Correct data related to workout,2,Check if it shows correct date and day
+Workout History,TC54,Correct data related to workout,3,Check if it shows correct icon of workout type
+Workout History,TC54,Correct data related to workout,4,Check if it shows graphs upon clicking on different workouts
+User Logout,TC55,Change of mobile screens after logging out,1,"Check if after secondary user logs out, it takes user to profile selection screen "
+User Logout,TC55,Change of mobile screens after logging out,2,"Check if after primary user logs out, it takes user to mobile number screen"
+User Logout,TC55,Change of mobile screens after logging out,3,"Check if after primary user logs out, it takes user to profile selection screen"
+Leaderboard,TC56,Check whether the ranks are appropriate,1,Join the session from two bikes and two different users
+Leaderboard,TC56,Check whether the ranks are appropriate,2,Check whether the ranking has changed for present users
+Leaderboard,TC56,Check whether the ranks are appropriate,3,"Check this on demand, scenic, live session"
+Design,TC58,"All error messages should be displayed in the same CSS style (For Example, using red color)",1,Any error message which is triggered during any validation should be colour codes in the same CSSstyle
+Design,TC58,"All error messages should be displayed in the same CSS style (For Example, using red color)",2,Colour coding consistent for the webpage.
+Design,TC59,"General confirmation messages should be displayed using CSS style other than error messages style (For Example, using green color)",1,Any message other than standard error message(warning message etc.) should be displayed in a css style(colour) other than thecolour/style used for an error message.
+Design,TC59,"General confirmation messages should be displayed using CSS style other than error messages style (For Example, using green color)",2,verify error message is displayed in red colour then a warning message should be somethign else like green colour.
+Design,TC60,Tooltips text should be meaningful.,1,Tooltips help the user to get a quick description about a particular web component/fucntionality. 
+Design,TC60,Tooltips text should be meaningful.,2,Thes tooltips should convey meaningful information about that component/tool on a page and should be brief.
+Design,TC61,Drop-down fields should have the first entry as blank or text like ‘Select’.,1,Click on a drop-down in any page
+Design,TC61,Drop-down fields should have the first entry as blank or text like ‘Select’.,2,All the drop-downs in any page of an applictaion should have the first entry as blank or a text like 'Select'.
+Design,TC62,Select/deselect all records option should be provided if page supports record add/delete/update functionality,1,Select all records individually
+Design,TC62,Select/deselect all records option should be provided if page supports record add/delete/update functionality,2,Select all options using the select all button
+Design,TC62,Select/deselect all records option should be provided if page supports record add/delete/update functionality,3,Whenever a page support add/update/delete fucntionality then theat page should provide the user with an option to select all the selectable items with a select all button.
+Currency,TC63,Amount values should be displayed with correct currency symbols.,1,"Fields which are supposed to be updated with currency values or are supposed to display currency values, should contain proepr currency symbols. "
+Currency,TC63,Amount values should be displayed with correct currency symbols.,2,These symbols should be relevant to the currency being displayed by default or the currency to be entered.
+Page Sorting,TC64,Default page sorting should be provided.,1,Page should be sorted by default.
+Page Sorting,TC64,Default page sorting should be provided.,2,Page should have a proper sequential numbering
+Reset Button,TC65,Reset button functionality should set default values for all fields.,1,Clicking on the reset button should discard the recent changes.
+Reset Button,TC65,Reset button functionality should set default values for all fields.,2,Set all the fields to their default values
+Formatting Numeric Values,TC66,All numeric values should be formatted properly.,1,All the numeric fields should be formatted correctly.  
+Formatting Numeric Values,TC66,All numeric values should be formatted properly.,2,The decimal places for fields having decimal values should be correct upto to the required number of values after the decimal place
+Formatting Numeric Values,TC66,All numeric values should be formatted properly.,3,The integer fields should not display decimal values.
+Field Labels,TC67,Check all input fields for special characters.,1,Proper checks should be in place for special characters in input fields.
+Field Labels,TC67,Check all input fields for special characters.,2, If special characters are accepatble then it should accept and if special characters are not acceptable then it should throw an error.
+Field Labels,TC68,Field labels should be standard e.g. field accepting user’s first name should be labeled properly as ‘First Name’.,1,Field labels should be standard. 
+Field Labels,TC68,Field labels should be standard e.g. field accepting user’s first name should be labeled properly as ‘First Name’.,2,This standard should be based on the base document 
+Field Labels,TC69,Check page sorting functionality after add/edit/delete operations on any record.,1,"The sorting on a page should be correct even if a record is added , removed or updated."
+Field Labels,TC69,Check page sorting functionality after add/edit/delete operations on any record.,2,Post this actions the sorting should be correct
+Timeout Functionality,TC70,Check for timeout functionality,1,Timeout should be updated
+Timeout Functionality,TC71,Timeout values should be configurable,1,Timeout values should be configured
+Timeout Functionality,TC72,Check application behavior after the operation timeout,1,Application should function properly after timeout is configured
+Cookies,TC73,Check cookies used in an application.,1,Different cookies used in the application 
+Cookies,TC73,Check cookies used in an application.,2,The password should not be stored in cookies.
+Cookies,TC73,Check cookies used in an application.,3,Cookie information should be stored in encrypted format only.
+Buttons,TC74,Check the functionality of buttons available on all pages.,1,All the buttons in every page should behave as expected. The functionality should be inline to the agreed standards or base document.
+Buttons,TC74,Check the functionality of buttons available on all pages.,2,"Check if the export button is showing proper icon according to the exported file type, For Example, Excel file icon for xls files"
+Buttons,TC74,Check the functionality of buttons available on all pages.,3,Check if the cancel button functionality is working in between the upload process.
+Buttons,TC74,Check the functionality of buttons available on all pages.,4,Check if the radio button and drop-down list options are saved correctly in the database.
+Pages,TC75,Check the text on all pages for spelling and grammatical errors.,1,All the markup in web pages should be standard.
+Pages,TC75,Check the text on all pages for spelling and grammatical errors.,2,Whenever a webpage crashes then user should be re-directed to an errorpage having a standard error message. 
+Pages,TC75,Check the text on all pages for spelling and grammatical errors.,3,The text appearing in all the pages should be free from any spelling and grammatical errors.
+Pages,TC75,Check the text on all pages for spelling and grammatical errors.,4,The same should be true for unavilable page as well.
+Pages,TC76,The user should not be able to submit a page twice by pressing the submit button in quick succession.,1,The user should not be able to submit a page twice by pressing the submit button in quick succession.
+Pages,TC76,The user should not be able to submit a page twice by pressing the submit button in quick succession.,2,"All fields on a page (For Example, text box, radio options, drop-down lists) should be aligned properly."
+Pages,TC76,The user should not be able to submit a page twice by pressing the submit button in quick succession.,3,"All the images , icons etc. should be intact and visible correctly. None of the images hsould be broken."
+Pages,TC76,The user should not be able to submit a page twice by pressing the submit button in quick succession.,4,All the links should be intact and visible correctly. None of the images hsould be broken.
+Pages,TC76,The user should not be able to submit a page twice by pressing the submit button in quick succession.,5,All pages should have a title.
+Pages,TC77,The user should be able to filter results using all parameters on the page.,1,Page text should be left-justified.
+Pages,TC77,The user should be able to filter results using all parameters on the page.,2,The user should be able to filter results using all parameters on the page.
+Pages,TC77,The user should be able to filter results using all parameters on the page.,3,The search functionality should filter and load the search page with all user-selected search parameters.
+Pages,TC77,The user should be able to filter results using all parameters on the page.,4,Page loading symbol should be displayed when it’s taking more than default time to load the result page.
+Pages,TC77,The user should be able to filter results using all parameters on the page.,5,Pagination should be enabled when there are more results than the default result count per page.
+Pages,TC78,For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,1,For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.
+Pages,TC78,For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,2,"Check for Next, Previous, First and Last page pagination functionality."
+Pages,TC78,For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,3,"Check if there is any field on the page with default focus (in general, the focus should be set on the first input field of the screen)."
+Pages,TC78,For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,4,Correct data should be saved from web page to database.
+Pages,TC79,Default page sorting,1,Default page sorting should be carried in the exported file as well.
+Pages,TC79,Default page sorting,2,Check if the data displayed on a page and exported Excel file is the same.
+Pages,TC79,Default page sorting,3,Check export functionality for pages containing special characters. 
+Pages,TC79,Default page sorting,4,Page load time should be withing acceptable range. This acceptablerange should be as per the gareed upon standards.
+Pages,TC79,Default page sorting,5,Page should load correctly and withign acceptable range in slow connections
+Pages,TC79,Default page sorting,6,Page crash should not reveal application or server info. The error page should be displayed for this.
+Pages,TC79,Default page sorting,7,Check if these special characters are exported properly in the Excel file.
+Email,TC80,Email addresses should be validated before sending emails.,1,The email template should use standard CSS for all emails.
+Email,TC80,Email addresses should be validated before sending emails.,2,Email addresses should be validated before sending emails. All invalid email addrres hsould be notified in an error message.
+Email,TC80,Email addresses should be validated before sending emails.,3,Special characters in the email body template should be handled properly.
+Email,TC80,Email addresses should be validated before sending emails.,4,Email subject should not be blank. Email with blank subject should be blocked.
+Email,TC81,Email sender name should not be blank.,1,If reports with dynamic values are included in the email body and report data should be calculated correctly.
+Email,TC81,Email sender name should not be blank.,2,Email sender name should not be blank.Email with blank sender name should be blocked.
+Email,TC81,Email sender name should not be blank.,3,"Emails should be checked in different email clients like Outlook, Gmail, Hotmail, Yahoo! mail, etc."
+Email,TC81,Email sender name should not be blank.,4,"Check to send email functionality using TO, CC and BCC fields."
+Email,TC82,"Check email header and footer for company logo, privacy policy, and other links.",1,Check plain text emails.
+Email,TC82,"Check email header and footer for company logo, privacy policy, and other links.",2,Check HTML format emails.
+Email,TC82,"Check email header and footer for company logo, privacy policy, and other links.",3,"Check email header and footer for company logo, privacy policy, and other links. This should be as per the base document."
+Email,TC82,"Check email header and footer for company logo, privacy policy, and other links.",4,Check emails with attachments.
+Email,TC83,"Check to send email functionality to single, multiple or distribution list recipients.",1,"Check to send email functionality to single, multiple or distribution list recipients."
+Email,TC83,"Check to send email functionality to single, multiple or distribution list recipients.",2,Check if a reply to the email address is correct.
+Email,TC83,"Check to send email functionality to single, multiple or distribution list recipients.",3,Check to send the high volume of emails.
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,1,The numeric fields should have validation for character input. A proper error message should be displayed whenever user tries to enter a character in a numeric .
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,2,The numeric fields should have validation for character input. A proper error message should be displayed whenever user tries to enter a character in a numeric .
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,3,All the numeric fields should be justified correctly. For example if the standard required numeric fields to be left justified then all the numeric fields in all pages should be left justified.
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,4," Check numeric fields with minimum, maximum, and float values. The max acceptable values, min acceptable values etc. should be as expected."
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,5,Check numeric fields with negative values (for both acceptance and non-acceptance). If negative values are accepted then it should be accepted but if negative values are not acceptable then user should be able to enter negative values.
+Numeric Validation,TC84,Check numeric input fields with character input values and a proper validation message should appear.,6,Check number formatting for numeric or currency values. Formatting should be the same as shown on the page.
+Grids,TC86,The total number of results should be displayed in the result grid.,1,The user should be able to select only one radio option and any combination for checkboxes.
+Grids,TC86,The total number of results should be displayed in the result grid.,2,Proper validation messages should be displayed for all invalid values for filter criteria.
+Grids,TC86,The total number of results should be displayed in the result grid.,3,Check if all the search parameters are used to fetch data shown on the result grid.
+Grids,TC86,The total number of results should be displayed in the result grid.,4,The total number of results should be displayed in the result grid.
+Grids,TC86,The total number of results should be displayed in the result grid.,5,Search criteria used for searching should be displayed in the result grid.
+Grids,TC86,The total number of results should be displayed in the result grid.,6,Result grid values should be sorted by default column.
+Grids,TC86,The total number of results should be displayed in the result grid.,7,Sorted columns should be displayed with a sort icon.
+Grids,TC86,The total number of results should be displayed in the result grid.,8,Result grids should include all the specified columns with correct values.
+Grids,TC87,Result grids should be displayed with proper column and row spacing.,1,Ascending and descending sorting functionality should work for columns supported by data sorting.
+Grids,TC87,Result grids should be displayed with proper column and row spacing.,2,Result grids should be displayed with proper column and row spacing.
+Grids,TC87,Result grids should be displayed with proper column and row spacing.,3,Duplicate records should not be displayed in the result grid.
+Grids,TC87,Result grids should be displayed with proper column and row spacing.,4,Check if all the columns are visible and a horizontal scrollbar is enabled if necessary.
+Grids,TC87,Result grids should be displayed with proper column and row spacing.,5,Check the data for dynamic columns (columns whose values are calculated dynamically based on the other column values).
+Grids,TC88,Check result grid data to know if the date range is enabled.,1,For result grids showing reports check ‘Totals’ row and verify the total for every column.
+Grids,TC88,Check result grid data to know if the date range is enabled.,2,Check if proper symbols are used for displaying column values e.g. % symbol should be displayed for percentage calculation.
+Grids,TC88,Check result grid data to know if the date range is enabled.,3,Check result grid data to know if the date range is enabled.
+Grids,TC88,Check result grid data to know if the date range is enabled.,4,The default window size should be as expected.
+Grids,TC88,Check result grid data to know if the date range is enabled.,5,The child window size should be as expected.
+Grids,TC88,Check result grid data to know if the date range is enabled.,6,Child windows should always close on closing parent window. The child windows should not remain open when parent window is closed.
+Configuration,TC89,Check if downloadable files are pointing to the correct file paths.,1,Check if downloadable files are pointing to the correct file paths.
+Configuration,TC89,Check if downloadable files are pointing to the correct file paths.,2,There shouldn't be any hard coding done.
+Configuration,TC89,Check if downloadable files are pointing to the correct file paths.,3,The naming convention should be standard for the resource keys. This standard should be based on a base document.
+Configuration,TC89,Check the number of fields with decimal number values.,1,The numeric fields should have validation for decimel input. A proper error message should be displayed whenever user tries to enter a decimel in a numeric .
+Configuration,TC85,Input data with the first and last position blank should be handled correctly.,1,Divide by zero errors should be handled for any calculations.
+Configuration,TC86,Input data with the first and last position blank should be handled correctly.,2,Spaces in input should be handled correctly.
+Configuration,TC89,Input data with the first and last position blank should be handled correctly.,3,"The field labels, columns etc. should have proper spacing between them. This is required for improved readability."
+Configuration,TC90,Input data with the first and last position blank should be handled correctly.,4,The scrollbar should be enabled only when necessary.
+Database,TC91,Check for data integrity,1,the columns which don't accept nullvalues should not accept null values even if it'sforceibly inserted.
+Database,TC91,Check for data integrity,2,Check for data integrity. Data should be stored in single or multiple tables based on the design. These tables should be as per what is mentioned in the base document.
+Database,TC91,Check for data integrity,3,Index names should be given as per the standards e.g. IND_<Tablename>_<ColumnName>. These names should be as per the base document.
+Database,TC91,Check for data integrity,4,Tables should have a primary key column.
+Database,TC92,Check if data is committed to the database only when the operation is successfully completed.,1,"Table columns should have description information available (except for audit columns like created date, created by, etc.)"
+Database,TC92,Check if data is committed to the database only when the operation is successfully completed.,2,For every database add/update operation log should be added. The log path should be standard.
+Database,TC92,Check if data is committed to the database only when the operation is successfully completed.,3,Required table indexes should be created.
+Database,TC92,Check if data is committed to the database only when the operation is successfully completed.,4,"Check if data is committed to the database only when the operation is successfully completed. Forany incomplete operation, the database should not get updated."
+Database,TC92,Check if data is committed to the database only when the operation is successfully completed.,5,Data should be rolled back in case of failed transactions.
+Database,TC93,Database Naming and Keys,1,Database logical names should be given according to the database name (again this is not standard but helpful for DB maintenance).
+Database,TC93,Database Naming and Keys,2,Stored procedures should not be named with a prefix “sp_”
+Database,TC93,Database Naming and Keys,3,Check if the database fields are designed with the correct data type and data length.
+Database,TC93,Database Naming and Keys,4," Check if all the table constraints like a Primary key, Foreign key, etc. are implemented correctly.Should be as per the base document."
+Database,TC93,Database Naming and Keys,5,Test stored procedures and triggers with sample input data.
+Database,TC93,Database Naming and Keys,6,Input field leading and trailing spaces should be truncated before committing data to the database.
+Database,TC93,Database Naming and Keys,7,Null values should not be allowed for the Primary key column.
+Naming and Sizing,TC94,The description text box should be multi-lined.,1,"Font size, style, and color for headline, description text, labels, infield data, and grid info should be standard as specified in SRS."
+Naming and Sizing,TC94,The description text box should be multi-lined.,2,The description text box should be multi-lined.
+Naming and Sizing,TC94,The description text box should be multi-lined.,3,The user should be able totype in a dropdown list in addition to the usual drop down action of selecting an option from the list.
+Naming and Sizing,TC94,The description text box should be multi-lined.,4,"In the error messages which occur due to a particular field, the fieldlabel in such error message should be correct."
+Naming and Sizing,TC95,Hourglass should be displayed when the application is busy.,1,The drop down list options should have readable labels. If the option labels are longer then usual then proper formatting should be in place but these labels should not be truncated
+Naming and Sizing,TC95,Hourglass should be displayed when the application is busy.,2,Whenever any update or delete action is performed then the proper warning or error message should be there.
+Naming and Sizing,TC95,Hourglass should be displayed when the application is busy.,3,"During an event such as page loading in progress, an hourglass icon should be displayed."
+Naming and Sizing,TC95,Hourglass should be displayed when the application is busy.,4,"If the child window is opened, the user should not be able to use or update any field in the background or parent window"
+Images,TC96,Check image upload functionality with images having space or any other allowed special character in the file name.,1,"Check window minimize, maximize, and close functionality."
+Images,TC96,Check image upload functionality with images having space or any other allowed special character in the file name.,2,Check if the window is re-sizable.
+Images,TC96,Check image upload functionality with images having space or any other allowed special character in the file name.,3,Check scroll bar functionality for parent and child windows.
+Images,TC96,Check image upload functionality with images having space or any other allowed special character in the file name.,4,Check for uploaded image path. The path should be as mentione din base document.
+Images,TC97,Check image upload and change functionality.,1,Check image upload and change functionality. The upload path should be correct. The uploaded images should be correct after upload is done.
+Images,TC97,Check image upload and change functionality.,2,"Check image upload functionality with image files of different extensions (For Example, JPEG, PNG, BMP, etc.).The uploaded images should be correct after upload is done."
+Images,TC97,Check image upload and change functionality.,3,Check image upload functionality with images having space or any other allowed special character in the file name. The images with invalid names hsould not be accepted.
+Images,TC97,Check image upload and change functionality.,4,Check duplicate name image upload.
+Images,TC97,Check image upload and change functionality.,5,Check image upload with image size greater than the max allowed size. The Proper error message should be displayed.
+Images,TC98,Image quality checking for users,1,Check if images of specified height and width (if defined) are accepted otherwise rejected.
+Images,TC98,Image quality checking for users,2,The image upload progress bar should appear for large size images.
+Images,TC98,Image quality checking for users,3,Check if file selection dialog shows only supported files listed.
+Images,TC98,Image quality checking for users,4,Check multiple images upload functionality.
+Images,TC98,Image quality checking for users,5,Check image quality after upload. Image quality should not be changed after upload.
+Images,TC98,Image quality checking for users,6,Check if the user is able to use/view the uploaded images.
+Files ,TC99,The file should get exported in the proper file extension.,1,The file should get exported in the proper file extension. These extension should be as per the base document.
+Files ,TC99,The file should get exported in the proper file extension.,2,The file name for the exported Excel file should be as per the standards.
+Files ,TC99,The file should get exported in the proper file extension.,3,"if the file name is using the timestamp, it should get replaced properly with an actual timestamp at the time of exporting the file."
+Files ,TC99,Date format.,1,Check for date format if exported Excel file contains the date columns.
+Files ,TC100,Excel file data formatting.,1,"Excel file data should be formatted properly with header and footer text, date, page numbers, etc. values for all pages."
+Files ,TC101,Check export functionality when pagination is enabled.,1,Check export functionality when pagination is enabled.
+Files ,TC101,Check export functionality when pagination is enabled.,2,Check export functionality for files with very large size.
+Files ,TC101,Check export functionality when pagination is enabled.,3,Check export functionality for pages containing special characters. Check if these special characters are exported properly in the Excel file.
+Response Time,TC102,Check if the page load time is within the acceptable range.,1,Page load time should be withing acceptable range. 
+Response Time,TC102,Check if the page load time is within the acceptable range.,2,This acceptable range should be as per the agreed upon standards.
+Response Time,TC103,Check the page load on slow connections.,1,Page should load correctly and withign acceptable range in slow connections
+Response Time,TC104,Response time for action.,1,"Check the response time for any action under a light, normal, moderate, and heavy load conditions."
+Response Time,TC105,databse performannce,1,Check the performance of database stored procedures and triggers.
+Response Time,TC106,Check the database query execution time.,1,Check the database query execution time. 
+Response Time,TC106,Check the database query execution time.,2,The query execution time should not cross the accepatable time range.
+Response Time,TC106,Check the database query execution time.,3,Check for load testing of the application.
+Response Time,TC106,Check the database query execution time.,4,Check for the Stress testing of the application. 
+Response Time,TC106,Check the database query execution time.,5,System should not break within low stress. 
+Response Time,TC106,Check the database query execution time.,6,In high stress system should behave gracefully.
+Response Time,TC106,Check the database query execution time.,7,Check CPU and memory usage under peak load conditions.
+Attacks,TC107,Check for SQL injection attacks.,1,System should be resistant to SQL injection attacks.
+Attacks,TC107,Check for SQL injection attacks.,2,Secure pages should use the HTTPS protocol.
+Attacks,TC107,Check for SQL injection attacks.,3,Escape special characters in the input.
+Attacks,TC107,Check for SQL injection attacks.,4,Error messages should not reveal any sensitive information.
+Attacks,TC107,Check for SQL injection attacks.,5,All credentials should be transferred over an encrypted channel.
+Attacks,TC107,Check for SQL injection attacks.,6,Check application logout functionality.
+Attacks,TC107,Check for SQL injection attacks.,7,"Post logout, none of the post login page should be accessible."
+Attacks,TC108,Check for Brute Force Attacks.,1,Check for Brute Force Attacks.   
+Attacks,TC108,Check for Brute Force Attacks.,2,System should be resistant to brute force attack
+Authentication,TC109,Check session cookie.,1,Check session cookie duration and session termination after timeout or logout.
+Authentication,TC109,Check session cookie.,2,Session tokens should be transmitted over a secured channel.
+Attacks,TC110,Test for Denial of Service attacks.,1,Test for Denial of Service attacks.
+Attacks,TC110,Test for Denial of Service attacks.,2,Test for memory leakage.
+Attacks,TC110,Test for Denial of Service attacks.,3,Test unauthorized application access by manipulating variable values in the browser address bar.
+Files,TC111,File extension handing,1,Test file extension handing so that exe files are not uploaded and executed on the server.
+Files,TC112,File upload,1,File upload functionality should use file type restrictions
+Files,TC112,File upload,2,Should use anti-virus for scanning uploaded files.
+Files,TC113,Check if directory listing is prohibited.,1,Check if directory listing is prohibited.
+Files,TC114,Check if important events are logged in log files.,1,Check if important events are logged in log files.
+Files,TC114,Check if important events are logged in log files.,2,Check server response
+Authorization,TC115,access privileges,1,Check if access privileges are implemented correctly. 
+Authorization,TC115,access privileges,2,Users having a particular access privilage should not be ableto access fucntionalities/pages of an user having a different privielage.
+Input Validation,TC116,All mandatory fields should be validated and indicated by an asterisk (*) symbol.,1,"Check all the mandatory fields in all the forms, screens, pop-up windows etc."
+Input Validation,TC116,All mandatory fields should be validated and indicated by an asterisk (*) symbol.,2,make sure that they are marked by an asterix(*) symbol. 
+Input Validation,TC116,All mandatory fields should be validated and indicated by an asterisk (*) symbol.,3,"Additionaly if there are any agreed upon colour coding for such fields and the asterix symbol, then that should be present."
+Files ,TC117,The exported file should have columns with proper column names.,1,The exported file should have columns with proper column names.
+Files ,TC117,The exported file should have columns with proper column names.,2,These ccolumn names should be as per the uplaoded base document.
+OTP Validation,TC118,Click on OTP and enter earlier received OTP again,1,Enter the mobile number
+OTP Validation,TC118,Click on OTP and enter earlier received OTP again,2,send OTP
+Files,TC119,upload file,1,file type restrictions should be used for File upload functionality
+Files,TC119,upload file,2,uploaded files should be scanned with anti virus
+Response Time,TC121,Verify if the page load time is in the proper range.,1,Page load time should be withing proper range. 
+Response Time,TC121,Verify if the page load time is in the proper range.,2,This acceptable range should be as per standards.
+Password,TC122,Password and sensitive fields,1,Test password security.
+Password,TC122,Password and sensitive fields,2,Test password policy enforcement.
+Password,TC123,Passwords and other sensitive fields should be masked while typing.,1,Passwords field should be masked while typing.
+Password,TC123,Passwords and other sensitive fields should be masked while typing.,2,Other sensitive fields should be masked while typing.
+Password,TC124,forgot password functionality,1,Check if forgot password functionality is secured.
+Password,TC124,forgot password functionality,2,Check with feature like temporary password expiry after specified hour
+Password,TC124,forgot password functionality,3,Ensure security question is asked before changing or requesting a new password.
+Password,TC125,Sensitive fields,1,Sensitive fields like passwords and credit card information should not have to autocomplete enabled.
+Password,TC125,Sensitive fields,2,Verify if sensitive fields are masked except the last four digits
+Password,TC126,Verify CAPTCHA functionality.,1,Verify CAPTCHA functionality. 
+Password,TC126,Verify CAPTCHA functionality.,2,The CAPTCHA shoul not be repeated.
+Password,TC126,Verify CAPTCHA functionality.,3,Everytime a new captcha should be generated.
+Design,TC127,Validation error messages should be shown in correct place.,1,Entering invalid values in a field on any webpage 
+Design,TC127,Validation error messages should be shown in correct place.,2, The triggered error messages should as per the expected design
+Design,TC127,Validation error messages should be shown in correct place.,3,Wait for server response
