@@ -12,7 +12,18 @@ In today’s rapidly advancing software industry,  we experience exciting techno
   - Open the Jupyter Notebook file *[I_Test_Step_Clustering_Word2Vec.ipynb](I_Test_Step_Clustering_Word2Vec.ipynb)* and execute all the cells one-by-one.
   - Run the *Code Executon* cell block.
 
+
 - Step-II: 
+  - Based on the clustered data and clustered label files we get we use it in the ensemble approach.
+  - Open the Jupyter Notebook file *[II_EnsembleClustering.ipynb](II_EnsembleClustering.ipynb)* and execute all the cells one-by-one.
+  
+ - Step-III: 
+  - From Step-II we will be getting the pairwise similar distances of the test steps and test cases and will be using in this step.
+  - Open the Jupyter Notebook file *[III_CosineSimilarity.ipynb](III_CosineSimilarity.ipynb)* and execute all the cells one-by-one.
+  
+ - Step-IV: 
+  - After getting the similarity score of all the test steps we use the .txt file generated from the code to generate a new output test cases file which will not have the redundant test cases and steps
+  - Open the Jupyter Notebook file *[IV_FinalConversion.ipynb](IV_FinalConversion.ipynb)* and execute all the cells one-by-one.
 
 
 
