@@ -8,7 +8,7 @@ In today’s rapidly advancing software industry,  we experience exciting techno
 
 ## Techniques Used
 
-To cluster similar test steps, we performed several experiments with the following text embedding techniques, text similarity metrics, and clustering algorithms:
+The following techniques were used to remove the redundant test cases and test steps:
 
 **Text embedding techniques**
 
